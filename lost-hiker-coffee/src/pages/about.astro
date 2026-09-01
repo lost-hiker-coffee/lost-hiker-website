@@ -7,8 +7,8 @@ import Layout from '../layouts/Layout.astro';
   <section class="page-hero">
     <div class="container">
       <p class="section-label">Our Story</p>
-      <h1 class="page-title">Built by wanderers.</h1>
-      <p class="page-intro">Lost Hiker is a home roastery in Sayward, BC. It's run by Jordan and Leah — two people who love mountains, good coffee, and the quiet satisfaction of doing something well.</p>
+      <h1 class="page-title">Where the trail led us.</h1>
+      <p class="page-intro">We're Jordan and Leah, the owners, founders, roasters, packers, salespeople, taste testers, and just about everything else behind Lost Hiker Coffee Roasters in Sayward, BC.</p>
     </div>
   </section>
 
@@ -18,23 +18,32 @@ import Layout from '../layouts/Layout.astro';
         <img src="/images/leahjordan.jpg" alt="Leah and Jordan, co-founders of Lost Hiker Coffee Roasters" />
       </div>
       <div class="story-text">
+
         <h2>How it started</h2>
-        <p>Jordan has been roasting coffee at home for years — the kind of hobby that starts with one piece of equipment and slowly takes over a corner of the kitchen. When Leah joined in, it became something different: less experiment, more practice. They got serious about sourcing, serious about technique, and serious about what they were actually making.</p>
+        <p>Our story started long before Lost Hiker had a name.</p>
+        <p>Years ago, Jordan was invited into the home of an Eritrean family and watched them roast coffee the traditional way, right in a pan in their kitchen. The experience stayed with him, and so did the idea of roasting coffee ourselves.</p>
+        <p>At the same time, we had always been drawn to quieter places. Some of our favourite time together has been spent camping, exploring logging roads, and finding beautiful spots off the beaten path.</p>
+        <p>Eventually, that pull toward a simpler, more remote life brought us to Sayward. Once we were here, the idea of roasting coffee finally felt like it had found the right home.</p>
 
-        <p>The name came naturally. They live at the end of the Kusam Climb trail — a route most people treat as a day hike and a few treat as a life's work. The trailhead is practically their front door. "Lost hiker" isn't a warning; it's a disposition. It's the person who takes the unmarked fork, stays out past dark, and finds something good they weren't looking for.</p>
+        <h2>From a Whirley Pop to Lost Hiker</h2>
+        <p>Life in Sayward has a different rhythm. We grow some of our own food, forage, make things ourselves, and spend a lot of time surrounded by the wild beauty of northern Vancouver Island. Roasting our own coffee felt like a natural extension of that way of life, especially in a place where freshly roasted coffee isn't something you can simply pick up around the corner.</p>
+        <p>So we started with a Whirley Pop and a lot of experimenting.</p>
+        <p>Friends and family became our first taste testers, bringing encouragement, honest opinions, and very different ideas about what a great cup of coffee should taste like. Eventually, that same community came together to help us purchase a real coffee roaster and turn a long-held interest into Lost Hiker Coffee Roasters.</p>
+        <p>Today, every batch is roasted in our roasting studio here on our property in Sayward. That spirit of experimentation still shapes what we roast, with our coffees growing through tasting, feedback, tinkering, and the simple pleasure of sharing a good cup with the people around us.</p>
 
-        <h2>The roastery</h2>
-        <p>Everything is roasted in small batches at their home in Sayward. Small-batch roasting means more attention per batch — adjusting temperatures by feel and sound as much as by dial, stopping at exactly the right moment. It's slower than roasting at scale, but that's the point.</p>
+        <h2>Why Lost Hiker?</h2>
+        <p>Our roasting studio sits on our property near the end of the Kusam Climb. Every year, hikers make their way past us after coming down from Mount Kusam, the same mountain you'll find in the Lost Hiker logo.</p>
+        <p>The name felt right for more than that reason.</p>
+        <p>We've always loved wandering, exploring, taking the long way, and finding beautiful things where you weren't necessarily looking for them. To us, getting a little lost isn't always a bad thing. Sometimes it's how you end up exactly where you're meant to be.</p>
 
-        <p>Sayward is a small community on the northeast coast of Vancouver Island, surrounded by old-growth forest and inlet water. It's quiet and it's beautiful and it makes sense as a place to do something careful and unhurried. The mountains are right there.</p>
-
-        <h2>What we care about</h2>
-        <p>We buy green beans from importers whose sourcing we respect — people who work directly with farms and care about traceability and fair pay. Right now, most of our coffee comes from Colombia's Huila region, through Mastercol. We like knowing exactly where it's from and who grew it.</p>
-
-        <p>We're not trying to be everything. Five roasts, each one developed over time, each one named for something that matters to us. We think that's plenty.</p>
+        <h2>What matters to us</h2>
+        <p>Lost Hiker is about good coffee, but it's also about making something ourselves and contributing, in our own small way, to the community we call home.</p>
+        <p>We roast in small batches, keep experimenting, listen to the people drinking our coffee, and try to make something we're proud to share.</p>
+        <p>For now, every batch is roasted right here in Sayward and shared close to home.</p>
 
         <blockquote>
-          <p>"Not all who wander are lost — but some of us are, and we're doing fine."</p>
+          <p>Roasted in Sayward for wandering minds and wandering kinds.</p>
+          <p class="blockquote-coda">Where it goes from here? We'll see where the trail leads.</p>
         </blockquote>
 
         <p>If you have questions about our coffee or want to place an order, <a href="/contact">get in touch</a>. We're not hard to find.</p>
@@ -99,7 +108,7 @@ import Layout from '../layouts/Layout.astro';
 
   .story-image img {
     width: 100%;
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
     border-radius: 2px;
     border: 1px solid var(--border);
@@ -142,12 +151,22 @@ import Layout from '../layouts/Layout.astro';
     margin: 1rem 0;
     background-color: var(--surface);
     border-radius: 0 2px 2px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   blockquote p {
     font-style: italic;
     font-size: 1.1rem !important;
     color: var(--cream) !important;
+    font-weight: 600;
+  }
+
+  blockquote .blockquote-coda {
+    font-weight: 400;
+    font-size: 0.97rem !important;
+    color: var(--mid) !important;
   }
 
   /* Values strip */
@@ -195,10 +214,6 @@ import Layout from '../layouts/Layout.astro';
 
     .sticky-image {
       position: static;
-    }
-
-    .story-image img {
-      aspect-ratio: 16 / 9;
     }
 
     .values-grid {

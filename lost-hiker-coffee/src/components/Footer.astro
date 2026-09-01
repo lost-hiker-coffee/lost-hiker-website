@@ -8,6 +8,10 @@ const year = new Date().getFullYear();
       <div class="footer-brand">
         <a href="/" class="footer-logo-link">
           <img src="/images/logo.jpg" alt="Lost Hiker Coffee Roasters" width="56" height="56" />
+          <span class="footer-wordmark" aria-hidden="true">
+            <span class="footer-wordmark-name">lost hiker</span>
+            <span class="footer-wordmark-sub">— coffee roasters —</span>
+          </span>
         </a>
         <p class="footer-tagline">Roasted in Sayward for the<br />wandering mind and wandering kind.</p>
       </div>
@@ -72,6 +76,13 @@ const year = new Date().getFullYear();
     gap: 1rem;
   }
 
+  .footer-logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+  }
+
   .footer-logo-link img {
     width: 56px;
     height: 56px;
@@ -79,10 +90,35 @@ const year = new Date().getFullYear();
     object-fit: cover;
     opacity: 0.9;
     transition: opacity 0.2s;
+    flex-shrink: 0;
   }
 
   .footer-logo-link:hover img {
     opacity: 1;
+  }
+
+  .footer-wordmark {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    gap: 2px;
+  }
+
+  .footer-wordmark-name {
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--cream);
+  }
+
+  .footer-wordmark-sub {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    color: var(--mid);
+    text-transform: uppercase;
   }
 
   .footer-tagline {

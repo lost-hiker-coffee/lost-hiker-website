@@ -38,7 +38,7 @@ import Layout from '../layouts/Layout.astro';
 
         <div class="contact-block">
           <h3>Where we are</h3>
-          <p>We're based in Sayward, BC — a small community on the northeast coast of Vancouver Island. We're a home roastery, so we don't have a storefront, but we ship across Canada and we're always happy to chat about our coffee.</p>
+          <p>We're based in Sayward, BC, a small community on the northeast coast of Vancouver Island. Our coffee is roasted in our dedicated roasting studio on our property here in Sayward.</p>
         </div>
 
         <div class="contact-block">
@@ -67,7 +67,7 @@ import Layout from '../layouts/Layout.astro';
           <div class="form-row two-col">
             <div class="form-group">
               <label for="name">Your name <span class="required" aria-hidden="true">*</span></label>
-              <input type="text" id="name" name="name" required autocomplete="name" placeholder="Jordan or Leah?" />
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name" />
             </div>
             <div class="form-group">
               <label for="email">Email address <span class="required" aria-hidden="true">*</span></label>
@@ -95,7 +95,7 @@ import Layout from '../layouts/Layout.astro';
           <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
         </form>
 
-        <div id="form-success" class="form-success" hidden>
+        <div id="form-success" class="form-success" style="display:none">
           <div class="success-icon" aria-hidden="true">✓</div>
           <h3>Message sent!</h3>
           <p>Thanks for reaching out. We'll get back to you soon.</p>
@@ -113,8 +113,8 @@ import Layout from '../layouts/Layout.astro';
   if (window.location.search.includes('success=true')) {
     const form = document.getElementById('contact-form');
     const success = document.getElementById('form-success');
-    if (form) form.hidden = true;
-    if (success) success.hidden = false;
+    if (form) form.style.display = 'none';
+    if (success) success.style.display = 'flex';
   }
 </script>
 

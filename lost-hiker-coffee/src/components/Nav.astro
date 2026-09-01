@@ -14,6 +14,10 @@ const currentPath = Astro.url.pathname;
     <div class="nav-inner container">
       <a href="/" class="nav-logo" aria-label="Lost Hiker Coffee Roasters — Home">
         <img src="/images/logo.jpg" alt="Lost Hiker Coffee Roasters" width="48" height="48" />
+        <span class="nav-wordmark" aria-hidden="true">
+          <span class="nav-wordmark-name">lost hiker</span>
+          <span class="nav-wordmark-sub">— coffee roasters —</span>
+        </span>
       </a>
 
       <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
@@ -82,16 +86,48 @@ const currentPath = Astro.url.pathname;
     height: 100%;
   }
 
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+  }
+
   .nav-logo img {
     width: 48px;
     height: 48px;
     border-radius: 50%;
     object-fit: cover;
     transition: opacity 0.2s;
+    flex-shrink: 0;
   }
 
   .nav-logo:hover img {
     opacity: 0.85;
+  }
+
+  .nav-wordmark {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .nav-wordmark-name {
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--cream);
+  }
+
+  .nav-wordmark-sub {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    color: var(--mid);
+    text-transform: uppercase;
+    margin-top: 1px;
   }
 
   .nav-links {
